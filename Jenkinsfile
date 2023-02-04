@@ -1,35 +1,33 @@
 pipeline {
   agent any
   stages {
-    stage('Allocating Workspace') {
-      parallel {
-        stage('Allocating Workspace') {
-          steps {
-            ws(dir: 'E:\\Workstation\\JenkinsNew') {
-              build 'SpringBootThymeleafView'
-            }
+    stage('User & Build Info') {
+      steps {
+        sleep 10
+      }
+    }
 
-          }
-        }
+    stage('Env Prep') {
+      steps {
+        sleep 10
+      }
+    }
 
-        stage('Build The Job') {
-          steps {
-            build 'SpringBootThymeleafView'
-          }
-        }
+    stage('G3 PWI RWI Deploy (S1)') {
+      steps {
+        sleep 10
+      }
+    }
 
-        stage('Deleting Workspace') {
-          steps {
-            cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, cleanupMatrixParent: true, deleteDirs: true, disableDeferredWipeout: true)
-          }
-        }
+    stage('CR Clone With JIRA Updated (S2)') {
+      steps {
+        sleep 10
+      }
+    }
 
-        stage('Finish') {
-          steps {
-            echo 'Build Successful'
-          }
-        }
-
+    stage('G3 RWI Promote to Prod (S3)') {
+      steps {
+        sleep 10
       }
     }
 
