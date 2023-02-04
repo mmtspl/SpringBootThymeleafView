@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('Build') {
       steps {
         build(job: 'SpringBootThymeleafView', propagate: true)
       }
