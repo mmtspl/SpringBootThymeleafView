@@ -31,5 +31,35 @@ pipeline {
       }
     }
 
+    stage('CR Submit for Approval (S4)') {
+      steps {
+        sleep 10
+      }
+    }
+
+    stage('SIT RWI Deploy to Horse (S5)') {
+      steps {
+        sleep 10
+      }
+    }
+
+    stage('Archive Checkpoints from Log (S6)') {
+      steps {
+        sleep 10
+      }
+    }
+
+    stage('Build') {
+      steps {
+        build 'SpringBootThymeleafView'
+      }
+    }
+
+    stage('Finish') {
+      steps {
+        echo 'Finish'
+      }
+    }
+
   }
 }
