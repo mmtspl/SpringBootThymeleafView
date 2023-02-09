@@ -9,7 +9,7 @@ pipeline {
 
     stage('Env Prep') {
       steps {
-        sleep 10
+        sleep 4
       }
     }
 
