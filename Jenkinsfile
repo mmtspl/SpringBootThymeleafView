@@ -15,37 +15,37 @@ pipeline {
 
     stage('G3 PWI RWI Deploy (S1)') {
       steps {
-        sleep 10
+        sleep 4
       }
     }
 
     stage('CR Clone With JIRA Updated (S2)') {
       steps {
-        sleep 10
+        sleep 4
       }
     }
 
     stage('G3 RWI Promote to Prod (S3)') {
       steps {
-        sleep 10
+        sleep 4
       }
     }
 
     stage('CR Submit for Approval (S4)') {
       steps {
-        sleep 10
+        sleep 4
       }
     }
 
     stage('SIT RWI Deploy to Horse (S5)') {
       steps {
-        sleep 10
+        sleep 4
       }
     }
 
     stage('Archive Checkpoints from Log (S6)') {
       steps {
-        sleep 10
+        sleep 4
       }
     }
 
