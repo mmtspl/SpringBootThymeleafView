@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 @Controller  
 public class DemoController 
 {  
-@RequestMapping("/")  
+@RequestMapping("/sbt")  
 public String index()
 {  
 //returns to index.html
